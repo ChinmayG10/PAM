@@ -69,6 +69,55 @@ tbody {
 		// Animate loader off screen
 		//$(".se-pre-con").fadeOut("slow");
 		  $('#loading').hide();
+		  var select_all = document.getElementById("select_all"); //select all checkbox
+			var checkboxes = document.getElementsByClassName("checkbox"); //checkbox items
+
+			//select all checkboxes
+			select_all.addEventListener("change", function(e){
+			    for (i = 0; i < checkboxes.length; i++) {
+			        checkboxes[i].checked = select_all.checked;
+			    }
+			});
+
+
+			for (var i = 0; i < checkboxes.length; i++) {
+			    checkboxes[i].addEventListener('change', function(e){ //".checkbox" change
+			        //uncheck "select all", if one of the listed checkbox item is unchecked
+			        if(this.checked == false){
+			            select_all.checked = false;
+			        }
+			        //check "select all" if all checkbox items are checked
+			        if(document.querySelectorAll('.checkbox:checked').length == checkboxes.length){
+			            select_all.checked = true;
+			        }
+			    });
+			}
+			
+/* =====================================================*/			
+			  var select_all = document.getElementById("select_all1"); //select all checkbox
+				var checkboxes = document.getElementsByClassName("checkbox1"); //checkbox items
+
+				//select all checkboxes
+				select_all.addEventListener("change", function(e){
+				    for (i = 0; i < checkboxes.length; i++) {
+				        checkboxes[i].checked = select_all.checked;
+				    }
+				});
+
+
+				for (var i = 0; i < checkboxes.length; i++) {
+				    checkboxes[i].addEventListener('change', function(e){ //".checkbox" change
+				        //uncheck "select all", if one of the listed checkbox item is unchecked
+				        if(this.checked == false){
+				            select_all.checked = false;
+				        }
+				        //check "select all" if all checkbox items are checked
+				        if(document.querySelectorAll('.checkbox1:checked').length == checkboxes.length){
+				            select_all.checked = true;
+				        }
+				    });
+				}
+				
 
 	});
 	function showLoading(){
@@ -119,6 +168,8 @@ tbody {
 		}
 		
 		
+		
+		
 		/* window.onload = function(){
 			alert("algorithm"+document.location.href);
 			//document.location.href = '${pageContext.request.contextPath}/processRater';
@@ -136,7 +187,7 @@ tbody {
 <!--  <div class="se-pre-con"></div> -->
   <header id="header">
 		<div class="container-fluid">
-			<div class="logo"><a href="dashboard.jsp" onclick="showLoading();"><img src="images/mphasis_logo.png" alt="Mphasis"></a>
+			<div class="logo"><a href="homepage.html" onclick="showLoading();"><img src="images/mphasis_logo.png" alt="Mphasis"></a>
 			</div>
 			<div class="program hidden-xs" align="right" >
 			
@@ -165,7 +216,7 @@ tbody {
 	<div class="navigation" ><!-- class="navbar navbar-inverse navbar-fixed-left" -->
 		<nav id="nav">
 			<ul>
-			<li class="active"><a href="dashboard.jsp" onclick="showLoading();">User Management</a>
+			<li class="active"><a href="homepage.html" onclick="showLoading();">User Management</a>
 				<div class="submenu">
 				<ul>
 					<li class=""><a href="addBULead.html" onclick="showLoading();">Add BU Lead</a></li>
@@ -218,11 +269,11 @@ tbody {
 				value="Process Algorithm" onclick="onClickAlgorithm();" style="background-color: #4f81bd; margin-left: auto; margin-right: auto;"> -->
 						<div>&nbsp;</div>					
 							
-Select Table:
+<span style="font-size:25px;color:black;">Filter By BU:</span>
 <select id="selectAlgorithm" onchange="onchangeAlorithmSelect(this);">
 			
 			<option value="AlgoValues" >All  </option>
-            <option value="AlgoSteps" > Filter 1 </option> 
+            <option value="AlgoSteps" > CBIT Main </option> 
             
 </select>
 <div>&nbsp;</div>
@@ -230,6 +281,7 @@ Select Table:
  <table style=" " frame=box rules=groups >
  <thead>
   <tr>
+    <th style="background-color:#6EB7FF;word-wrap: break-word;width: 50px;" >Select All<br><input type="checkbox" id="select_all"/></th>
     <th style="background-color:#6EB7FF;word-wrap: break-word;width: 180px;" >BU</th>
     <th style="background-color:#6EB7FF;word-wrap: break-word;width: 180px;">Account</th>  
     <th style="background-color:#6EB7FF;word-wrap: break-word;width: 180px;">Server Name</th>
@@ -238,32 +290,36 @@ Select Table:
   </tr></thead>
   <tbody>
 
-  <tr>
-    <td style="word-wrap: break-word" rowspan="5">Consumer</td>
+  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>
+    <td style="word-wrap: break-word">Consumer</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-   <tr>   
+   <tr><td><input class="checkbox" type="checkbox" name="check[]"></td> 
+   <td style="word-wrap: break-word">Consumer</td>  
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
   </tr>
-  <tr>  
+  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>
+  <td style="word-wrap: break-word">Consumer</td>  
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr>   
+  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td> 
+  <td style="word-wrap: break-word">Consumer</td>  
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
   </tr>
- <tr>  
+ <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>
+ <td style="word-wrap: break-word">Consumer</td>  
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
@@ -271,64 +327,72 @@ Select Table:
   </tr>
   
   
-   <tr>
-    <td style="word-wrap: break-word" rowspan="5">CBIT</td>
+   <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>
+    <td style="word-wrap: break-word" >CBIT</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-   <tr>   
+   <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>   
+	<td style="word-wrap: break-word" >CBIT</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
   </tr>
-  <tr>  
+  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>  
+    <td style="word-wrap: break-word" >CBIT</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr>   
+  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>   
+	<td style="word-wrap: break-word" >CBIT</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
   </tr>
- <tr>  
+ <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>  
+    <td style="word-wrap: break-word" >CBIT</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
   
-     <tr>
-    <td style="word-wrap: break-word" rowspan="5">TRO</td>
+     <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>
+    <td style="word-wrap: break-word">TRO</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-   <tr>   
+   <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>   
+	<td style="word-wrap: break-word">TRO</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
   </tr>
-  <tr>  
+  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>  
+    <td style="word-wrap: break-word">TRO</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr>   
+  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>   
+	<td style="word-wrap: break-word">TRO</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
   </tr>
- <tr>  
+ <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>  
+    <td style="word-wrap: break-word">TRO</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
@@ -340,9 +404,11 @@ Select Table:
 
 <!-- Filter 1 -->
 <div style="overflow: scroll; border-style: groove" id="AlgoSteps" class="tableMaxHeight">
- <table style=" " frame=box rules=groups >
+
+<table style=" " frame=box rules=groups >
  <thead>
   <tr>
+    <th style="background-color:#6EB7FF;word-wrap: break-word;width: 50px;" >Select All<br><input type="checkbox" id="select_all1"/></th>
     <th style="background-color:#6EB7FF;word-wrap: break-word;width: 180px;" >BU</th>
     <th style="background-color:#6EB7FF;word-wrap: break-word;width: 180px;">Account</th>  
     <th style="background-color:#6EB7FF;word-wrap: break-word;width: 180px;">Server Name</th>
@@ -351,32 +417,37 @@ Select Table:
   </tr></thead>
   <tbody>
 
-  <tr>
-    <td style="word-wrap: break-word" rowspan="15">CBIT Main</td>
+  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>
+  
+    <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-   <tr>   
+   <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>   
+	  <td style="word-wrap: break-word"  >CBIT Main</td>
 	  <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr>  
+  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>
+    <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr>   
-	  <td style="word-wrap: break-word">DGUTIERREZ</td>
+  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>  
+	 <td style="word-wrap: break-word"  >CBIT Main</td>
+	 <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
- <tr>  
+ <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>  
+    <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
@@ -384,64 +455,74 @@ Select Table:
   </tr>
   
   
-   <tr>
+   <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>
    <!--  <td style="word-wrap: break-word" rowspan="5">CBIT</td> -->
+    <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-   <tr>   
+   <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>   
+	  <td style="word-wrap: break-word"  >CBIT Main</td>
 	  <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr>  
+  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>  
+    <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr>   
+  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>   
+	  <td style="word-wrap: break-word"  >CBIT Main</td>
 	  <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
- <tr>  
+ <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>  
+    <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
   
-     <tr>
+     <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>
 <!--     <td style="word-wrap: break-word" rowspan="5">TRO</td> -->
+    <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-   <tr>   
+   <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>   
+	  <td style="word-wrap: break-word"  >CBIT Main</td>
 	  <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr>  
+  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>  
+    <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr>   
+  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>   
+  <td style="word-wrap: break-word"  >CBIT Main</td>
   <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
- <tr>  
+ <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>  
+    <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
@@ -449,8 +530,22 @@ Select Table:
   </tr>
 </tbody>
 </table>
+
 </div>
 
+						
+
+
+<br><div>&nbsp;</div>						
+<span style="font-size:25px;color:black;">Select BU Lead:</span>
+<select id="selectBULead" onchange="">
+			
+			<option value="1" >Ramesh,K  </option>
+            <option value="2" > Prabhakar, H </option> 
+            
+</select>
+<div>&nbsp;</div>
+<span style="font-size:20px;color:black;"><input type="button" name="" id="" size="60" value="Assign To BU Lead" /></span>
 						</section>
 					
 					</div>
@@ -461,6 +556,10 @@ Select Table:
 			</div>
   
   
+
+
+
+
   <footer id="footer">
    <div class="container">
       
