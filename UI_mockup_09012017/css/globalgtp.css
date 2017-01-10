@@ -1,0 +1,152 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body { font-family: Arial, Helvetica, Sans-serif; }
+
+h2 { color: #777; font-size: 22px; }
+
+a { color: #0088cc; }
+a:hover, a:focus { color: #005580; }
+
+.login-panel { margin-top: 50%; }
+
+#header { background-color: #000; }
+
+/* updated by CG :font size*/ 
+#footer { background-color: #FFFFFF; }
+	#footer h2 { color: #777; font-size: 24px; padding: 10px 0; }
+	#footer h3 { color: #777; font-size: 14px; font-weight: bold; padding-bottom: 10px; }
+	#footer section { padding-bottom: 20px; }
+		#footer section li { font-size: 16px; line-height: 20px; }
+			#footer section li a { color: #686c6f; }
+	#footer #copyright { background-color: #6b6f72; color: #ffffff; font-size: 12px; padding: 10px; }
+
+.logo { float: left; }
+
+.program { float: right; }
+	.program h1 { color: #fff; font-size: 40px; font-weight: normal; padding-top: 25px; }
+		.program h1 a { color: #fff; }
+
+/* updated by CG :font size*/ 
+.navigation { background-color: #E0E1E3; position: relative; }
+	.navigation nav ul li { float: left; }
+		.navigation nav ul li a { color: #666; display: block; font-size: 18px; padding: 8px 15px; }
+	.navigation nav ul li.active { background-color: #3096CF; }
+		.navigation nav ul li.active a { color: #fff; text-decoration: underline; }
+			.navigation nav ul li.active li a { text-decoration: none; }
+			.navigation nav ul li.active li.active a { color: #fff; text-decoration: underline; }
+		.navigation nav ul li .submenu { position: absolute; }
+			.navigation nav ul li.active .submenu { background-color: #3096CF;/*  width: 100%; */ }
+
+.mobnav, .mobnav:hover, .mobnav:focus { color: #fff; display: block; float: right; font-size: 30px; height: 40px; overflow: hidden; padding-top: 5px; text-decoration: none; width: 30px; }
+
+/* updated by CG */ 
+
+.content-wrapper { padding: 30px 0 0px; }
+	.content-wrapper aside { display: block; border-right: solid 1px #ddd; padding: 20px; }
+		.content-wrapper aside .user-details { color: #777; font-size: 14px; padding-bottom: 30px; }
+		.content-wrapper aside .subnav li { border-top: solid 1px #ddd; font-size: 14px; padding: 10px 0; }
+		.content-wrapper aside .subnav li:first-child { border: 0; }
+
+	.content-wrapper .container .row > div { border-left: solid 1px #ddd; margin-left: -1px; padding-bottom: 20px; }
+
+	.content-wrapper h1 { font-size: 22px; padding: 20px 0; }
+	
+	.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
+}
+#loading {
+width: 100%;
+height: 100%;
+top: 0px;
+left: 0px;
+position: fixed;
+display: block;
+opacity: 0.7;
+background-color: #fff;
+z-index: 99;
+text-align: center;
+}
+
+#loading-image {
+position: fixed;
+top: 350px;
+left: 650px;
+z-index: 1000;
+}
+.tableMaxHeight {
+max-height: 400px;
+}
+/* CSS used here will be applied after bootstrap.css */
+/* .navbar-fixed-left {
+  width: 140px;
+  position: fixed;
+  border-radius: 0;
+  height: 100%;
+}
+
+.navbar-fixed-left .navbar-nav > li {
+  float: none;  Cancel default li float: left
+  width: 139px;
+}
+
+.navbar-fixed-left + .container {
+  padding-left: 160px;
+}
+
+.container {
+  height: 1000px;
+}
+
+.wrapper {
+  margin-left: 140px;
+} */

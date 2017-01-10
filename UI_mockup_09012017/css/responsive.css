@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+	.logo { padding-top: 0px; }
+	.logo img { width: 150px; }
+
+	#footer section { border-top: solid 1px #C9CACD; float: none; margin-right: 0; padding: 10px 0; }
+		#footer section h3 { padding-left: 15px; }
+		#footer section ul { padding-left: 15px; }
+}
+
+@media (max-width: 998px) {
+	#footer section { }
+}

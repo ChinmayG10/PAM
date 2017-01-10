@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>PAM Portal</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+  
+   <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/globalgtp.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/skel.min.js"></script>
+  <script src="js/skel-panels.min.js"></script>
+  <noscript>
+   <link rel="stylesheet" href="css/skel-noscript.css" />
+   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/style-desktop.css" />
+  </noscript>
+<style>
+#rcorners2 {
+	border-radius: 25px;
+	border: 3px solid #4f81bd;
+	background-color: #F4F4F4;
+	top: 400px;
+	padding-top: 40px;
+	width: 700px;
+	height: 250px;
+}
+</style>
+<title>Login Page</title>
+
+
+</head>
+<script type="text/javascript">
+
+		$(window).load(function() {
+			// Animate loader off screen
+			//$(".se-pre-con").fadeOut("slow");
+			  $('#loading').hide();
+
+		});
+		function showLoading(){
+			document.getElementById("loading").style.display = "block";
+			//alert('iii');
+		}
+</script>
+<body>
+<div id="loading">
+    <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />
+</div>
+
+	<header id="header">
+		<div class="container-fluid">
+			<div class="logo"><a href=""><img src="images/mphasis_logo.png" alt="Mphasis"></a>
+			</div>
+			<a href="#" class="mobnav visible-xs glyphicon glyphicon-menu-hamburger"></a>
+			<div class="clearfix"></div>
+		</div>
+	</header>
+
+<!-- <form method="post" action="" enctype="application/x-www-form-urlencoded"> -->
+	<div>&nbsp;</div>
+	
+	<center>
+	<div class="" style="margin-top: 100px;" id="rcorners2">
+
+	<center><span style="color: red"></span></center>
+	<div>&nbsp;</div>
+		<table width="450" align="center">
+			<tr>
+				<td width="100"><label> Username </label></td>
+				<td></td>
+				<td><input class="form-control" id="txtUserName" type="text"
+					placeholder="Username" name="txtUserName" value="admin"></td>
+			</tr>
+
+			<tr>
+				<td><label> Password </label></td>
+				<td></td>
+				<td><input class="form-control" placeholder="Password"
+					name="password" type="password" id="txtPassword" name="txtPassword" value="admin"></td>
+			</tr>
+			<tr>
+				<td colspan="3">&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan="3"><a href="homepage.html"><button onclick="showLoading();"
+						style="background-color: #4f81bd; margin-left: auto; margin-right: auto; display: block; margin-bottom: 0%;color: black;">
+						Submit</button></a></td>
+			</tr>
+
+		</table>
+
+	</div>
+	</center>
+<!-- </form> -->
+ <footer id="footer">
+   <div class="container">
+      
+      <section>
+       <h2></h2>
+       <div>
+        <div class="row">
+         <div class="3u" style="height: 150px;">
+          <ul class="">
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           
+          </ul>
+         </div>
+         
+         </div>
+        </div>
+       </div>
+      </section>
+     
+     
+      <div id="copyright">
+       &copy; Mphasis. All rights reserved. | Design: Mphasis Insurance Apps
+      </div>
+    </footer>
+</body>
+
+</html>

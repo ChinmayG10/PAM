@@ -1,0 +1,290 @@
+   <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>PAM Portal</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+  
+   <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-progressbar-3.3.4.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet"> -->
+
+    <!-- Custom CSS -->
+    <link href="css/globalgtp.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/skel.min.js"></script>
+  <script src="js/skel-panels.min.js"></script>
+  <script src="js/bootstrap-progressbar.js"></script>
+  <!-- <script src="js/bootstrap-progressbar.min.js"></script> -->
+  <noscript>
+   <link rel="stylesheet" href="css/skel-noscript.css" />
+   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/style-desktop.css" />
+   <link rel="stylesheet" href="css/ie9.css" />
+  </noscript>
+
+<style>
+th, td {
+Color:black;
+    border: 1px solid Grey;
+  border-collapse: collapse; 
+}
+table {
+Color:black;
+padding-left:25px;
+border: 1px solid Grey;table-layout:inherit;
+border-collapse: collapse; 
+overflow: auto;
+}
+th, td  {
+    padding: 10px;
+    max-width: 350px;
+    
+    overflow-y:auto;
+}
+tbody {
+    height: 700px;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+</style>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+	</head>
+	<!-- Added By CG:Start -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	
+	<script type="text/javascript">
+	$(window).load(function() {
+		// Animate loader off screen
+		//$(".se-pre-con").fadeOut("slow");
+		  $('#loading').hide();
+
+	});
+	function showLoading(){
+		document.getElementById("loading").style.display = "block";
+		//alert('iii');
+	}
+
+	function onClickAlgorithm(){
+			
+			//alert("algorithm"+document.location.href);
+			document.getElementById("buttonType").value="Algorithm";
+			document.getElementById("myForm").submit();
+			
+			
+		}
+		$(document).ready(function(){
+
+			var dropDownObject=document.getElementById("selectAlgorithm");
+			for(var i = 0; i <= dropDownObject.options.length; i++){
+				 
+				 if(dropDownObject.options[0].value==dropDownObject.options[i].value){
+					 
+					 $("#"+dropDownObject.options[i].value).show();	
+				 }else{
+					 
+					$("#"+dropDownObject.options[i].value).hide(); 
+				 }
+				 
+			 }
+			
+		});	
+			
+
+		
+		function onchangeAlorithmSelect(dropDownObject){
+			 
+			for(var i = 0; i <= dropDownObject.options.length; i++){
+				 
+				 if(dropDownObject.options[dropDownObject.selectedIndex].value==dropDownObject.options[i].value){
+					 
+					 $("#"+dropDownObject.options[i].value).show();	
+				 }else{
+					 
+					$("#"+dropDownObject.options[i].value).hide(); 
+				 }
+				 
+			 }
+		}
+		
+		
+		/* window.onload = function(){
+			alert("algorithm"+document.location.href);
+			//document.location.href = '${pageContext.request.contextPath}/processRater';
+			
+			document.getElementById("buttonType").value="Algorithm";
+			document.getElementById("myForm").submit();
+			
+		} */
+</script>
+<!--Added By CG:End-->
+	<body>
+	<div id="loading">
+    <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />
+	</div>
+<!--  <div class="se-pre-con"></div> -->
+  <header id="header">
+		<div class="container-fluid">
+			<div class="logo"><a href="dashboard.jsp" onclick="showLoading();"><img src="images/mphasis_logo.png" alt="Mphasis"></a>
+			</div>
+			<div class="program hidden-xs" align="right" >
+			
+				<a href="homepage.html"><font color="#4286f4" size="19" style="margin-top: 10px;">PAM Portal</font></a>
+				<div>&nbsp;</div>
+				<div class="user-details">
+				<font color="#000000" style="margin-top: 10px;">
+				Welcome, <span class="user" >
+				Admin
+				 </span> | 
+				  </font>
+				  <a class="logout" href="logout.html"><font color="#000000" style="margin-top: 10px;">Logout</font></a></div>
+			
+				</div>
+				
+			
+			<a href="#" class="mobnav visible-xs glyphicon glyphicon-menu-hamburger"></a>
+			<div class="clearfix"></div>
+		</div>
+	</header>
+	
+ 
+	<form method="post" id="myForm" name="myForm" action="processRater" enctype="application/x-www-form-urlencoded">
+	<!-- ********************************************************* -->
+	<input type="hidden" name="buttonType" id="buttonType"value="Formula" />
+	<div class="navigation" ><!-- class="navbar navbar-inverse navbar-fixed-left" -->
+		<nav id="nav">
+			<ul>
+			<li class="active"><a href="dashboard.jsp" onclick="showLoading();">User Management</a>
+				<div class="submenu">
+				<ul>
+					<li class="active"><a href="addBULead.html" onclick="showLoading();">Add BU Lead</a></li>
+					<li class=""><a href="addPAMSme.html" onclick="showLoading();">Add PAM SME</a></li>
+					<<!-- li class=""><a href="/DCRaterUtility/processRater?buttonType=Coverages" onclick="showLoading();">Coverages</a></li>
+					<li class=""><a href="/DCRaterUtility/processRater?buttonType=RateTable" onclick="showLoading();">Rate Table</a></li>
+					<li><a href="/DCRaterUtility/processRater?buttonType=LOV" onclick="showLoading();">LOV's</a></li> -->
+					<!-- <li><a href="utsuite.jsp">UT Suite</a> </li>
+	        		<li><a href="review.jsp">Review</a></li> -->
+				</ul>
+				</div>
+			</li>
+			
+			<li class=""><a href="accounts.html" onclick="showLoading();">Accounts</a>
+			</li>
+			<li><a href="reports.html" onclick="showLoading();">Reports</a></li>
+			<!-- <li><a href="testMenu.jsp" onclick="showLoading();">Test</a></li> -->
+			<li style="margin-left: 68%;margin-top: 5px;">
+		</li>
+			</ul>
+			<div class="clearfix"></div>
+		</nav>
+	</div>
+	
+		
+		<div class="content-wrapper">
+		<div id="main">
+			<div class="container">
+				<div class="">
+					<div class="2u">
+					<aside>	
+						<section>
+						
+							<ul class="link-list">
+						 
+								<li> </li>
+								
+							</ul>
+						
+							
+						</section>
+					</aside>
+									
+					</div>
+					<div class="10u skel-cell-mainContent">
+						
+						<section class="middle-content">
+							<p style="font-size:40px;color:black;">Add BU Lead</p>
+				<!-- <input class=button type="button"
+				value="Process Algorithm" onclick="onClickAlgorithm();" style="background-color: #4f81bd; margin-left: auto; margin-right: auto;"> -->
+
+<div>
+<span style="font-size:20px;color:black;">Name:  &nbsp;&nbsp;&nbsp;
+<input type="text" name="" id="" size="40" value="Enter Name"/>
+<br><div>&nbsp;</div>
+<span style="font-size:20px;color:black;">id :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   </span>
+<input type="text" name="" id="" size="40" value="Enter Email Id"/>
+<br><div>&nbsp;</div>
+<input type="button" name="" id="" size="40" value="Submit" />
+<br><div>&nbsp;</div>						
+</div>
+
+<div>&nbsp;</div>
+
+
+
+
+						</section>
+					
+					</div>
+					
+					</div>
+				</div>
+			</div>
+			</div>
+  
+  
+  <footer id="footer">
+   <div class="container">
+      
+     <!--<section>
+       <h2>SDLC Artifacts links</h2>
+       <div>
+        <div class="row">
+         <div class="3u">
+          <ul class="link-list">
+           <li>Requirements</li>
+           <li><a href="#">BRD</a></li>
+           <li><a href="#">Excel Rater</a></li>
+           <li><a href="#">Data Requirments</a></li>
+           <li><a href="#">Screen Specs</a></li>
+           <li><a href="#">Common Codes</a></li>
+           
+          </ul>
+         </div>
+      
+        
+     
+        </div>
+       </div>
+      </section> -->
+     
+     
+    </div>
+      <div id="copyright">
+       &copy; Mphasis. All rights reserved. | Design: Mphasis Insurance Apps
+      </div>
+    </footer>
+ <!-- ********************************************************* -->
+</form>  
+ </body>
+ 
+</html><!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
