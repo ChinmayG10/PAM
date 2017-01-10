@@ -69,8 +69,8 @@ tbody {
 		// Animate loader off screen
 		//$(".se-pre-con").fadeOut("slow");
 		  $('#loading').hide();
-		  var select_all = document.getElementById("select_all"); //select all checkbox
-			var checkboxes = document.getElementsByClassName("checkbox"); //checkbox items
+		  var select_all = document.getElementById("select_all2"); //select all checkbox
+			var checkboxes = document.getElementsByClassName("checkbox2"); //checkbox items
 
 			//select all checkboxes
 			select_all.addEventListener("change", function(e){
@@ -87,15 +87,15 @@ tbody {
 			            select_all.checked = false;
 			        }
 			        //check "select all" if all checkbox items are checked
-			        if(document.querySelectorAll('.checkbox:checked').length == checkboxes.length){
+			        if(document.querySelectorAll('.checkbox2:checked').length == checkboxes.length){
 			            select_all.checked = true;
 			        }
 			    });
 			}
 			
 /* =====================================================*/			
-			  var select_all = document.getElementById("select_all1"); //select all checkbox
-				var checkboxes = document.getElementsByClassName("checkbox1"); //checkbox items
+			  var select_all = document.getElementById("select_all3"); //select all checkbox
+				var checkboxes = document.getElementsByClassName("checkbox3"); //checkbox items
 
 				//select all checkboxes
 				select_all.addEventListener("change", function(e){
@@ -112,7 +112,7 @@ tbody {
 				            select_all.checked = false;
 				        }
 				        //check "select all" if all checkbox items are checked
-				        if(document.querySelectorAll('.checkbox1:checked').length == checkboxes.length){
+				        if(document.querySelectorAll('.checkbox3:checked').length == checkboxes.length){
 				            select_all.checked = true;
 				        }
 				    });
@@ -280,7 +280,7 @@ tbody {
  <table style=" " frame=box rules=groups >
  <thead>
   <tr>
-    <th style="background-color:#6EB7FF;word-wrap: break-word;width: 50px;" >Select All<br><input type="checkbox" id="select_all"/></th>
+    <th style="background-color:#6EB7FF;word-wrap: break-word;width: 50px;" >Select All<br><input type="checkbox" id="select_all2"/></th>
     <th style="background-color:#6EB7FF;word-wrap: break-word;width: 180px;" >BU</th>
     <th style="background-color:#6EB7FF;word-wrap: break-word;width: 180px;">Account</th>  
     <th style="background-color:#6EB7FF;word-wrap: break-word;width: 180px;">Server Name</th>
@@ -289,35 +289,35 @@ tbody {
   </tr></thead>
   <tbody>
 
-  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>
+  <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>
     <td style="word-wrap: break-word">Consumer</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-   <tr><td><input class="checkbox" type="checkbox" name="check[]"></td> 
+   <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td> 
    <td style="word-wrap: break-word">Consumer</td>  
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
   </tr>
-  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>
+  <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>
   <td style="word-wrap: break-word">Consumer</td>  
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td> 
+  <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td> 
   <td style="word-wrap: break-word">Consumer</td>  
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
   </tr>
- <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>
+ <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>
  <td style="word-wrap: break-word">Consumer</td>  
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
@@ -326,35 +326,35 @@ tbody {
   </tr>
   
   
-   <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>
+   <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>
     <td style="word-wrap: break-word" >CBIT</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-   <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>   
+   <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>   
 	<td style="word-wrap: break-word" >CBIT</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
   </tr>
-  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>  
+  <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>  
     <td style="word-wrap: break-word" >CBIT</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>   
+  <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>   
 	<td style="word-wrap: break-word" >CBIT</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
   </tr>
- <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>  
+ <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>  
     <td style="word-wrap: break-word" >CBIT</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
@@ -362,35 +362,35 @@ tbody {
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
   
-     <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>
+     <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>
     <td style="word-wrap: break-word">TRO</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-   <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>   
+   <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>   
 	<td style="word-wrap: break-word">TRO</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
   </tr>
-  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>  
+  <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>  
     <td style="word-wrap: break-word">TRO</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>   
+  <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>   
 	<td style="word-wrap: break-word">TRO</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
 	<td style="word-wrap: break-word">DGUTIERREZ</td>
 	<td style="word-wrap: break-word">Queen</td>
   </tr>
- <tr><td><input class="checkbox" type="checkbox" name="check[]"></td>  
+ <tr><td><input class="checkbox2" type="checkbox" name="check[]"></td>  
     <td style="word-wrap: break-word">TRO</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
@@ -407,7 +407,7 @@ tbody {
 <table style=" " frame=box rules=groups >
  <thead>
   <tr>
-    <th style="background-color:#6EB7FF;word-wrap: break-word;width: 50px;" >Select All<br><input type="checkbox" id="select_all1"/></th>
+    <th style="background-color:#6EB7FF;word-wrap: break-word;width: 50px;" >Select All<br><input type="checkbox" id="select_all3"/></th>
     <th style="background-color:#6EB7FF;word-wrap: break-word;width: 180px;" >BU</th>
     <th style="background-color:#6EB7FF;word-wrap: break-word;width: 180px;">Account</th>  
     <th style="background-color:#6EB7FF;word-wrap: break-word;width: 180px;">Server Name</th>
@@ -416,7 +416,7 @@ tbody {
   </tr></thead>
   <tbody>
 
-  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>
+  <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>
   
     <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
@@ -424,28 +424,28 @@ tbody {
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-   <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>   
+   <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>   
 	  <td style="word-wrap: break-word"  >CBIT Main</td>
 	  <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>
+  <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>
     <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>  
+  <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>  
 	 <td style="word-wrap: break-word"  >CBIT Main</td>
 	 <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
- <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>  
+ <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>  
     <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
@@ -454,7 +454,7 @@ tbody {
   </tr>
   
   
-   <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>
+   <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>
    <!--  <td style="word-wrap: break-word" rowspan="5">CBIT</td> -->
     <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
@@ -462,28 +462,28 @@ tbody {
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-   <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>   
+   <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>   
 	  <td style="word-wrap: break-word"  >CBIT Main</td>
 	  <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>  
+  <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>  
     <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>   
+  <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>   
 	  <td style="word-wrap: break-word"  >CBIT Main</td>
 	  <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
- <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>  
+ <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>  
     <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
@@ -491,7 +491,7 @@ tbody {
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
   
-     <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>
+     <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>
 <!--     <td style="word-wrap: break-word" rowspan="5">TRO</td> -->
     <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
@@ -499,28 +499,28 @@ tbody {
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-   <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>   
+   <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>   
 	  <td style="word-wrap: break-word"  >CBIT Main</td>
 	  <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>  
+  <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>  
     <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
-  <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>   
+  <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>   
   <td style="word-wrap: break-word"  >CBIT Main</td>
   <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
   </tr>
- <tr><td><input class="checkbox1" type="checkbox" name="check[]"></td>  
+ <tr><td><input class="checkbox3" type="checkbox" name="check[]"></td>  
     <td style="word-wrap: break-word"  >CBIT Main</td>
     <td style="word-wrap: break-word">DGUTIERREZ</td>
     <td style="word-wrap: break-word">Beatles</td>
